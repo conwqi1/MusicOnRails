@@ -1,0 +1,23 @@
+<h1>Here is my bands</h1>
+<ul>
+<% current_user.bands.each do |band| %>
+<li>
+name: <%= band.band_name %>
+<form action="<%= band_url(band.id) %>">
+    <input type="submit" value="check band info">
+</form>
+<form action="<%= edit_band_url(band.id) %>">
+    <input type="submit" value="Edit">
+</form>
+<form action="<%= band_url band %>">
+    <input type="submit" value="Delete">
+</form>
+</li>
+<% end %>
+</ul>
+<br>
+
+<form action="<%= new_band_url %>">
+    <input type="submit" value="create a new band">
+</form>
+

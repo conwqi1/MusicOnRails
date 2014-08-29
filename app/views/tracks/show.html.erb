@@ -1,0 +1,16 @@
+<h1>Track Info</h1>
+
+<h3>Name:</h3>
+<%=@track.track_name %>
+<br>
+<br>
+
+<form action="<%=edit_track_url %>">
+    <input type="submit" value="Edit Track Info">
+</form>
+
+<form action="<%=tracks_url(@track.id) %>">
+    <input type="submit" value="Show all tracks">
+</form>
+
+<a href="<%=tracks_url %>">Return to Track Index</a>

@@ -1,0 +1,26 @@
+<h1>Band Info</h1>
+
+<h3>Name:</h3>
+<%=@band.band_name %>
+<br>
+<br>
+
+<form action="<%=edit_band_url %>">
+    <input type="submit" value="Edit Band Info">
+</form>
+
+<form action="<%=new_band_album_url(@band.id) %>">
+    <input type="submit" value="Add album to band">
+</form>
+
+
+<form action="<%=albums_url(@band.id) %>">
+    <input type="submit" value="show all albums">
+</form>
+<br>
+
+<a href="<%=bands_url %>">Return to Band Index</a>
+
+
+
+

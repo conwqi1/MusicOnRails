@@ -1,0 +1,8 @@
+<h1>Enter album information</h1>
+<form action="<%=albums_url %>" method="POST">
+  <label for="album_name">AlbumName:</label>
+  <input type="hidden" name ="album[band_id]" value="<%=@current_band.id %>">
+  <input type="text" name="album[album_name]" id = "album_album_name">
+  <br>
+  <input type="submit" value ="create album">
+</form>

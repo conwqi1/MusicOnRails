@@ -1,0 +1,9 @@
+<h1>Enter band information</h1>
+<form action="<%=bands_url %>" method="POST">
+  <label for="band_name">BandName:</label>
+  <input type="hidden" name ="band[owner_id]" value="<%=current_user.id %>">
+  <input type="text" name="band[band_name]" id = "band_band_name">
+  <br>
+  <input type="submit" value ="create band">
+</form>
+

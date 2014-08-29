@@ -1,0 +1,23 @@
+<h1>Album Info</h1>
+
+<h3>Name:</h3>
+<%=@album.album_name %>
+<br>
+<br>
+
+<form action="<%=edit_album_url %>">
+    <input type="submit" value="Edit Album Info">
+</form>
+
+<form action="<%=new_album_track_url(@album.id) %>">
+    <input type="submit" value="Add tracks to album">
+</form>
+
+
+<form action="<%=tracks_url(@album.id) %>">
+    <input type="submit" value="Show all tracks">
+</form>
+
+<a href="<%=albums_url %>">Return to Album Index</a>
+
+

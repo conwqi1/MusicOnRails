@@ -1,0 +1,17 @@
+<h1>Welcome to the music app, please sign up to use!</h1>
+
+<form action='<%= users_url %>' method="POST">
+  <label for="user_email">UserEmail</label>
+    <input 
+      type="text" 
+      name="user[email]" 
+      id="user_email"
+      value="<%= @user.email %>">
+ <br>
+ 
+  <label for="user_password">UserPassword</label>
+  <input type="password" name="user[password]" id="user_password">
+  <br>
+  
+  <input type="submit" value="Sign Up">
+</form>
